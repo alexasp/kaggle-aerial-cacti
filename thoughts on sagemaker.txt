@@ -9,6 +9,8 @@ I'm curious how much it will cost - do I pay a full hour for each job i launch e
 
 Doing transfer learning with net pretrained on imagenet was veeeery easy
 
+testing different hyperparameters is fairly quick when you can launch N instances instead of running locally
+
 Example training status log:
 
 Start time
@@ -21,6 +23,8 @@ Uploading	May 08, 2019 07:53 UTC	May 08, 2019 07:53 UTC	Uploading generated trai
 Failed		May 08, 2019 07:53 UTC	May 08, 2019 07:53 UTC	Training job failed
 
 Couldn't get image to accept the RecordIO file I generated with im2rec, so had to upload .lst and image files separately instead.
+
+make sure you launch with enough storage space to store final model, otherwise you'll train the whole thing then fail at save time
 
 
 default image classification with 44 layers, 30 epochs:
@@ -35,7 +39,12 @@ training accuracy:   0.997
 validation accuracy: 0.987
 test: ?
 
-default image classification with 34 layers, 30 epochs, transfer learning w/ imagenet:
-training accuracy:   
-validation accuracy: 
+default image classification with 34 layers, 50 epochs, transfer learning w/ imagenet:
+training accuracy: 0.989  
+validation accuracy: 0.988
+test: ?
+
+default image classification with 34 layers, 100 epochs, transfer learning w/ imagenet:
+training accuracy: 994
+validation accuracy: 983
 test: ?
